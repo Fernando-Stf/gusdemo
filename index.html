@@ -84,12 +84,24 @@
           </div>
         </div>
         <div class="hero__stage">
-          <img
-            src="assets/hero-phones.png"
-            alt="Dois smartphones de linha alta sobre uma superfície escura, com iluminação de estúdio"
-            width="960"
-            height="720"
-          />
+          <div class="hero-placeholder">
+            <svg viewBox="0 0 600 400" width="400" height="267" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="heroGradient" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#2a2f38"/>
+                  <stop offset="100%" stop-color="#111318"/>
+                </linearGradient>
+              </defs>
+              <rect width="600" height="400" fill="url(#heroGradient)"/>
+              <g fill="none" stroke="#3d434d" stroke-width="1">
+                <circle cx="220" cy="160" r="90" opacity="0.3"/>
+                <circle cx="380" cy="200" r="80" opacity="0.3"/>
+                <circle cx="220" cy="160" r="110" opacity="0.2"/>
+                <circle cx="380" cy="200" r="100" opacity="0.2"/>
+              </g>
+              <text x="50%" y="90%" text-anchor="middle" fill="#3d434d" font-family="sans-serif" font-size="18">Hero phones placeholder</text>
+            </svg>
+          </div>
         </div>
       </section>
 
@@ -141,7 +153,14 @@
         <ul>
           <li>
             <a href="#smartphones" data-focus="desempenho">
-              <img src="assets/phones/galaxy-s25-ultra.png" alt="" />
+              <div class="chooser-img-wrapper">
+                <svg viewBox="0 0 200 300" width="100%" height="100%">
+                  <rect width="200" height="300" fill="#2a2f38" rx="20"/>
+                  <rect x="25" y="40" width="150" height="220" fill="#3d434d" rx="15"/>
+                  <rect x="30" y="50" width="140" height="200" fill="#111318" rx="10"/>
+                  <circle cx="100" cy="70" r="8" fill="#3d434d"/>
+                </svg>
+              </div>
               <span>
                 <strong>Desempenho</strong>
                 Para quem busca velocidade, multitarefa e recursos avançados.
@@ -150,7 +169,14 @@
           </li>
           <li>
             <a href="#smartphones" data-focus="fotografia">
-              <img src="assets/phones/pixel-9-pro.png" alt="" />
+              <div class="chooser-img-wrapper">
+                <svg viewBox="0 0 200 300" width="100%" height="100%">
+                  <rect width="200" height="300" fill="#2a2f38" rx="20"/>
+                  <rect x="25" y="40" width="150" height="220" fill="#3d434d" rx="15"/>
+                  <rect x="30" y="50" width="140" height="200" fill="#111318" rx="10"/>
+                  <circle cx="100" cy="70" r="8" fill="#3d434d"/>
+                </svg>
+              </div>
               <span>
                 <strong>Fotografia</strong>
                 Para quem prioriza qualidade de imagem, vídeo e recursos de câmera.
@@ -159,7 +185,14 @@
           </li>
           <li>
             <a href="#smartphones" data-focus="custo">
-              <img src="assets/phones/galaxy-a56.png" alt="" />
+              <div class="chooser-img-wrapper">
+                <svg viewBox="0 0 200 300" width="100%" height="100%">
+                  <rect width="200" height="300" fill="#2a2f38" rx="20"/>
+                  <rect x="25" y="40" width="150" height="220" fill="#3d434d" rx="15"/>
+                  <rect x="30" y="50" width="140" height="200" fill="#111318" rx="10"/>
+                  <circle cx="100" cy="70" r="8" fill="#3d434d"/>
+                </svg>
+              </div>
               <span>
                 <strong>Custo-benefício</strong>
                 Para quem procura um aparelho adequado às suas necessidades e orçamento.
@@ -171,12 +204,14 @@
 
       <section class="bench" id="assistencia">
         <div class="bench__photo">
-          <img
-            src="assets/bench.png"
-            alt="Bancada de assistência técnica com um celular aberto, chaves de precisão e uma bandeja de parafusos"
-            width="880"
-            height="660"
-          />
+          <div class="bench-placeholder">
+            <svg viewBox="0 0 400 300" width="100%" height="100%">
+              <rect width="400" height="300" fill="#2a2f38"/>
+              <rect x="80" y="100" width="240" height="180" fill="#3d434d" rx="10"/>
+              <rect x="100" y="120" width="200" height="140" fill="#111318" rx="8"/>
+              <rect x="120" y="140" width="160" height="40" fill="#2678f3" rx="4"/>
+            </svg>
+          </div>
         </div>
         <div class="bench__copy">
           <h2>Seu aparelho merece cuidado especializado.</h2>
@@ -236,12 +271,16 @@
           <p>Explore os modelos disponíveis e encontre a opção ideal para você.</p>
           <a class="btn btn--primary" href="#smartphones">Ver smartphones</a>
         </div>
-        <img
-          src="assets/phones/iphone-16-pro.png"
-          alt=""
-          width="280"
-          height="520"
-        />
+        <div class="banner-img-wrapper">
+          <div class="banner-placeholder">
+            <svg viewBox="0 0 280 520" width="220" height="410">
+              <rect width="280" height="520" fill="#111318" rx="30"/>
+              <rect x="30" y="50" width="220" height="420" fill="#2678f3" rx="20"/>
+              <circle cx="140" cy="90" r="12" fill="#20242c"/>
+              <rect x="80" y="120" width="120" height="280" fill="#2a2f38" rx="10"/>
+            </svg>
+          </div>
+        </div>
       </section>
 
       <section class="contact" id="contato">
@@ -304,27 +343,38 @@
       </p>
     </footer>
 
-    <div class="sheet" id="ficha" hidden>
-      <div class="sheet__panel" role="dialog" aria-modal="true" aria-labelledby="ficha-nome">
-        <button class="sheet__close" type="button" id="ficha-fechar">
-          <span class="sr">Fechar</span>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg>
-        </button>
-        <img id="ficha-foto" alt="" />
-        <div>
-          <p class="sheet__brand" id="ficha-marca"></p>
-          <h2 id="ficha-nome"></h2>
-          <dl id="ficha-dados"></dl>
-          <p class="fine" id="ficha-aviso" hidden>
-            Item de demonstração. A disponibilidade real é confirmada pela loja.
-          </p>
-          <a class="btn btn--primary" id="ficha-consulta" href="#contato">Consultar disponibilidade</a>
+    <div class="modal-backdrop" id="ficha">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="ficha-nome">
+        <div class="modal-header">
+          <button class="modal-close" type="button" id="ficha-fechar" aria-label="Fechar">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg>
+          </button>
+        </div>
+        <div class="modal__grid">
+          <div class="modal__photo" id="ficha-foto-wrapper">
+            <img id="ficha-foto" alt="" />
+          </div>
+          <div class="modal__body">
+            <p class="sheet__brand" id="ficha-marca"></p>
+            <h2 id="ficha-nome"></h2>
+            <dl class="modal__meta" id="ficha-dados"></dl>
+            <p class="fine" id="ficha-aviso" hidden>
+              Item de demonstração. A disponibilidade real é confirmada pela loja.
+            </p>
+            <a class="btn btn--primary" id="ficha-consulta" href="#contato">Consultar disponibilidade</a>
+          </div>
         </div>
       </div>
     </div>
 
-    <button class="float" type="button" id="flutuante" hidden>WhatsApp</button>
-    <p class="toast" id="aviso" role="status" hidden></p>
+    <button class="float-btn" type="button" id="flutuante" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+      </svg>
+      WhatsApp
+    </button>
+    <p class="toast" id="aviso" role="status"></p>
 
     <script src="js/config.js"></script>
     <script src="js/catalog.js"></script>
