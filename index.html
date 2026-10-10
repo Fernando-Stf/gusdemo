@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GusPhone — Smartphones, Apple e assistência técnica</title>
+    <meta
+      name="description"
+      content="GusPhone: smartphones, produtos Apple, acessórios e assistência técnica. Consulte a disponibilidade pelo WhatsApp."
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+    <div class="topbar">
+      <p>Seu próximo smartphone está aqui · Atendimento especializado</p>
+    </div>
+
+    <header class="masthead">
+      <div class="masthead__bar">
+        <a class="brand" href="#inicio" aria-label="GusPhone, página inicial">
+          <img class="brand__logo" src="assets/logo.png" alt="" width="148" height="36" />
+          <span class="brand__word">GusPhone</span>
+        </a>
+
+        <form class="search" role="search" id="busca-form">
+          <label class="sr" for="busca">Buscar no catálogo</label>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="6.25" />
+            <path d="M16 16.5 20 20.5" />
+          </svg>
+          <input
+            id="busca"
+            type="search"
+            placeholder="Busque celulares, acessórios e serviços..."
+            autocomplete="off"
+          />
+        </form>
+
+        <div class="masthead__tools">
+          <a class="tool" id="atalho-whatsapp" href="#contato">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M6.2 18.6 4.6 21l2.5-.7A8.7 8.7 0 1 0 6.2 18.6Z"
+              />
+              <path d="M9.2 9.6c.2 1.5 1.9 3.2 3.6 3.7l1.1-1.1c.1-.1 1.6.5 1.6.5" />
+            </svg>
+            <span>WhatsApp</span>
+          </a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">
+            <span class="sr">Abrir menu</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <nav class="nav" id="menu" aria-label="Seções">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#smartphones" data-filter="todos">Smartphones</a></li>
+          <li><a href="#smartphones" data-filter="iphone">iPhones</a></li>
+          <li><a href="#acessorios">Acessórios</a></li>
+          <li><a href="#assistencia">Assistência técnica</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero" id="inicio">
+        <div class="hero__copy">
+          <h1>Tecnologia que acompanha você.</h1>
+          <p>
+            Smartphones, produtos Apple e assistência técnica para você escolher,
+            cuidar e aproveitar melhor seus dispositivos.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#smartphones">Explorar smartphones</a>
+            <a class="btn btn--ghost" href="#assistencia">Conhecer a assistência</a>
+          </div>
+        </div>
+        <div class="hero__stage">
+          <img
+            src="assets/hero-phones.png"
+            alt="Dois smartphones de linha alta sobre uma superfície escura, com iluminação de estúdio"
+            width="960"
+            height="720"
+          />
+        </div>
+      </section>
+
+      <section class="cats" aria-labelledby="cats-titulo">
+        <h2 class="sr" id="cats-titulo">Categorias</h2>
+        <ul>
+          <li><a href="#smartphones" data-filter="iphone"><i data-ico="phone"></i><span>iPhones</span></a></li>
+          <li><a href="#smartphones" data-filter="samsung"><i data-ico="phone"></i><span>Samsung</span></a></li>
+          <li><a href="#smartphones" data-filter="android"><i data-ico="phone"></i><span>Smartphones Android</span></a></li>
+          <li><a href="#acessorios"><i data-ico="case"></i><span>Acessórios</span></a></li>
+          <li><a href="#acessorios" data-item="fones"><i data-ico="audio"></i><span>Áudio</span></a></li>
+          <li><a href="#acessorios" data-item="carregadores"><i data-ico="plug"></i><span>Carregadores</span></a></li>
+          <li><a href="#assistencia"><i data-ico="wrench"></i><span>Assistência técnica</span></a></li>
+        </ul>
+      </section>
+
+      <section class="floor" id="smartphones">
+        <header class="floor__head">
+          <div>
+            <h2>Encontre seu próximo smartphone</h2>
+            <p>Compare opções e escolha o aparelho ideal para sua rotina.</p>
+          </div>
+          <div class="filters" role="group" aria-label="Filtrar por categoria">
+            <button type="button" data-filter="todos" aria-pressed="true">Todos</button>
+            <button type="button" data-filter="iphone" aria-pressed="false">iPhones</button>
+            <button type="button" data-filter="samsung" aria-pressed="false">Samsung</button>
+            <button type="button" data-filter="android" aria-pressed="false">Android</button>
+          </div>
+        </header>
+
+        <p class="demo-note" id="aviso-demo" hidden>
+          Catálogo demonstrativo: modelos ilustrativos para o desenvolvimento do site.
+          Preços, estoque e garantia ainda não foram informados pela loja.
+        </p>
+
+        <p class="empty" id="vazio" hidden>
+          Nenhum aparelho encontrado para essa busca.
+          <button type="button" id="limpar-busca">Limpar busca</button>
+        </p>
+
+        <ul class="grid" id="grade"></ul>
+      </section>
+
+      <section class="chooser" aria-labelledby="chooser-titulo">
+        <div class="chooser__intro">
+          <h2 id="chooser-titulo">Qual smartphone combina com você?</h2>
+          <p>Três caminhos para chegar mais rápido ao tipo de aparelho que faz sentido.</p>
+        </div>
+        <ul>
+          <li>
+            <a href="#smartphones" data-focus="desempenho">
+              <img src="assets/phones/galaxy-s25-ultra.png" alt="" />
+              <span>
+                <strong>Desempenho</strong>
+                Para quem busca velocidade, multitarefa e recursos avançados.
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#smartphones" data-focus="fotografia">
+              <img src="assets/phones/pixel-9-pro.png" alt="" />
+              <span>
+                <strong>Fotografia</strong>
+                Para quem prioriza qualidade de imagem, vídeo e recursos de câmera.
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#smartphones" data-focus="custo">
+              <img src="assets/phones/galaxy-a56.png" alt="" />
+              <span>
+                <strong>Custo-benefício</strong>
+                Para quem procura um aparelho adequado às suas necessidades e orçamento.
+              </span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="bench" id="assistencia">
+        <div class="bench__photo">
+          <img
+            src="assets/bench.png"
+            alt="Bancada de assistência técnica com um celular aberto, chaves de precisão e uma bandeja de parafusos"
+            width="880"
+            height="660"
+          />
+        </div>
+        <div class="bench__copy">
+          <h2>Seu aparelho merece cuidado especializado.</h2>
+          <p>
+            Conte com atendimento técnico para avaliar seu dispositivo, entender o
+            problema e encontrar o caminho mais adequado para o reparo.
+          </p>
+          <ul class="services" id="servicos"></ul>
+          <a class="btn btn--primary" id="cta-assistencia" href="#contato">
+            Consultar assistência pelo WhatsApp
+          </a>
+          <p class="fine">
+            O atendimento avalia o aparelho antes de indicar o reparo. Prazos e
+            condições são combinados nessa conversa.
+          </p>
+        </div>
+      </section>
+
+      <section class="floor floor--accessories" id="acessorios">
+        <header class="floor__head">
+          <div>
+            <h2>Os detalhes que completam sua experiência.</h2>
+            <p>Proteção, energia e áudio para o aparelho que você já tem.</p>
+          </div>
+        </header>
+        <ul class="accs" id="acessorios-lista"></ul>
+      </section>
+
+      <section class="trust" aria-label="Como a GusPhone atende">
+        <ul>
+          <li>
+            <i data-ico="person"></i>
+            <strong>Atendimento especializado</strong>
+            <span>Quem atende trabalha com celular todos os dias.</span>
+          </li>
+          <li>
+            <i data-ico="compare"></i>
+            <strong>Orientação na escolha</strong>
+            <span>Ajuda para comparar modelos antes de decidir.</span>
+          </li>
+          <li>
+            <i data-ico="wrench"></i>
+            <strong>Suporte técnico</strong>
+            <span>A mesma casa avalia e repara o aparelho.</span>
+          </li>
+          <li>
+            <i data-ico="chat"></i>
+            <strong>Contato direto</strong>
+            <span>A consulta acontece pelo WhatsApp da loja.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="banner" aria-labelledby="banner-titulo">
+        <div>
+          <h2 id="banner-titulo">Seu próximo upgrade começa aqui.</h2>
+          <p>Explore os modelos disponíveis e encontre a opção ideal para você.</p>
+          <a class="btn btn--primary" href="#smartphones">Ver smartphones</a>
+        </div>
+        <img
+          src="assets/phones/iphone-16-pro.png"
+          alt=""
+          width="280"
+          height="520"
+        />
+      </section>
+
+      <section class="contact" id="contato">
+        <h2>Fale com a GusPhone</h2>
+        <p>
+          A consulta de disponibilidade e a avaliação técnica acontecem pelo
+          WhatsApp. Use os botões nos produtos ou o atalho abaixo.
+        </p>
+        <dl>
+          <div>
+            <dt>WhatsApp</dt>
+            <dd id="contato-whatsapp">A confirmar</dd>
+          </div>
+          <div>
+            <dt>Endereço</dt>
+            <dd id="contato-endereco">A confirmar</dd>
+          </div>
+          <div>
+            <dt>Horário</dt>
+            <dd id="contato-horario">A confirmar</dd>
+          </div>
+        </dl>
+      </section>
+    </main>
+
+    <footer class="colophon">
+      <div class="colophon__brand">
+        <span class="brand__word">GusPhone</span>
+        <p>
+          Loja de smartphones e produtos Apple com assistência técnica para
+          avaliar e reparar o seu aparelho.
+        </p>
+      </div>
+      <nav aria-label="Comprar">
+        <h2>Comprar</h2>
+        <ul>
+          <li><a href="#smartphones" data-filter="todos">Smartphones</a></li>
+          <li><a href="#smartphones" data-filter="iphone">iPhones</a></li>
+          <li><a href="#acessorios">Acessórios</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Assistência">
+        <h2>Assistência</h2>
+        <ul>
+          <li><a href="#assistencia">Serviços disponíveis</a></li>
+          <li><a href="#assistencia">Como solicitar avaliação</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Atendimento</h2>
+        <ul>
+          <li id="rodape-whatsapp">WhatsApp: a confirmar</li>
+          <li id="rodape-endereco">Endereço: a confirmar</li>
+          <li id="rodape-horario">Horário: a confirmar</li>
+        </ul>
+        <p class="socials" id="redes" hidden></p>
+      </div>
+      <p class="legal">
+        <a href="privacidade.html">Política de privacidade</a>
+      </p>
+    </footer>
+
+    <div class="sheet" id="ficha" hidden>
+      <div class="sheet__panel" role="dialog" aria-modal="true" aria-labelledby="ficha-nome">
+        <button class="sheet__close" type="button" id="ficha-fechar">
+          <span class="sr">Fechar</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg>
+        </button>
+        <img id="ficha-foto" alt="" />
+        <div>
+          <p class="sheet__brand" id="ficha-marca"></p>
+          <h2 id="ficha-nome"></h2>
+          <dl id="ficha-dados"></dl>
+          <p class="fine" id="ficha-aviso" hidden>
+            Item de demonstração. A disponibilidade real é confirmada pela loja.
+          </p>
+          <a class="btn btn--primary" id="ficha-consulta" href="#contato">Consultar disponibilidade</a>
+        </div>
+      </div>
+    </div>
+
+    <button class="float" type="button" id="flutuante" hidden>WhatsApp</button>
+    <p class="toast" id="aviso" role="status" hidden></p>
+
+    <script src="js/config.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="js/icons.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

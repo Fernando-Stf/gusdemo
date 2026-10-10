@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Política de privacidade — GusPhone</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+    <header class="masthead">
+      <div class="masthead__bar">
+        <a class="brand" href="index.html" aria-label="GusPhone, página inicial">
+          <img class="brand__logo" src="assets/logo.png" alt="" width="148" height="36" />
+          <span class="brand__word">GusPhone</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="legal-page" id="conteudo">
+      <a class="back" href="index.html">Voltar ao início</a>
+      <h1>Política de privacidade</h1>
+      <p>
+        Esta página descreve o que o site da GusPhone faz com as informações de
+        quem o visita. O texto cobre apenas o que o site realmente faz hoje.
+      </p>
+
+      <h2>O que o site coleta</h2>
+      <p>
+        O site não tem cadastro, não tem área de conta e não pede dados pessoais
+        em formulário. A busca e os filtros funcionam no seu próprio navegador:
+        o que você digita não é enviado a nenhum servidor da GusPhone.
+      </p>
+
+      <h2>WhatsApp</h2>
+      <p>
+        Os botões de consulta abrem uma conversa no WhatsApp com uma mensagem
+        já preenchida com o nome do produto ou do serviço. A partir desse
+        clique, a conversa acontece no WhatsApp, sob as condições de uso e a
+        política de privacidade da própria plataforma. O número usado é o
+        número oficial informado pela empresa.
+      </p>
+
+      <h2>Cookies e rastreamento</h2>
+      <p>
+        Este site não instala cookies e não usa ferramentas de análise de
+        audiência, publicidade ou rastreamento.
+      </p>
+
+      <h2>Catálogo demonstrativo</h2>
+      <p>
+        Enquanto a loja não publica o catálogo confirmado, os produtos exibidos
+        são ilustrativos e estão marcados como demonstração. Eles não
+        representam oferta, preço ou disponibilidade.
+      </p>
+
+      <h2>Contato</h2>
+      <p>
+        Pedidos sobre dados pessoais podem ser feitos pelo WhatsApp oficial da
+        loja, assim que o número for publicado no site.
+      </p>
+    </main>
+
+    <script>
+      const logo = document.querySelector(".brand__logo");
+      logo.addEventListener("load", () => document.body.classList.add("has-logo"));
+      logo.addEventListener("error", () => logo.remove());
+    </script>
+  </body>
+</html>
